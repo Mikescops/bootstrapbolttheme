@@ -1,0 +1,63 @@
+{% include '_header.twig' %}
+
+<div class="container-fluid" style="margin-top: 100px;">
+      <div class="row-fluid">
+
+        <div class="span8">
+
+           <h1>Search results for <b>{{ search }}</b>.</h1>
+
+        {% for record in records %}
+          <div>
+          	<h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
+          	{% if record.image!="" %}
+          	<div style="float: left">
+            <a href="{{ image(record.image) }}">
+                <img src="{{ thumbnail(record.image, 220, 130) }}">
+            </a>
+        </div>
+        {% endif %}
+
+        <div style="margin-left: 240px;">
+        {% if record.introduction %}
+          {{ record.introduction }}
+        {% elseif record.teaser %}
+          {{ record.teaser }}
+        {% else %}
+          <p>{{ record.excerpt(300) }}</p>
+        {% endif %}
+
+        {% include '_recordfooter.twig' with {record: record} %}
+			</div>
+    </div>
+    <br>   <br>
+    <hr>
+
+
+
+        {% else %}
+    <article>
+         <p>No results found for '{{ search }}'. Please try another search.</p>
+    </article>
+    {% endfor %}
+
+    <br>
+    {{ pager() }}
+
+    </div>
+
+    <div class="span4">
+          <div class="well sidebar-nav">
+            
+          	{% include '_aside.twig' %}
+
+          </div><!--/.well -->
+        </div><!--/span-->
+
+    </div>
+
+    </div>
+
+    <hr>
+
+    {% include '_footer.twig' %}
