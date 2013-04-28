@@ -18,7 +18,7 @@
         <div class="span4" style="text-align: center;">
 
         	{% if record.image!="" %}
-          <a href="{{ image(record.image) }}"><img class="img-circle" src="{{ thumbnail(record.image, 150, 150) }}"></a>
+          <a href="{{ image(record.image) }}"><img class="img-circle fancybox" src="{{ thumbnail(record.image, 150, 150) }}"></a>
           {% endif %}
 
           <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
