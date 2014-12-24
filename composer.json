@@ -12,5 +12,12 @@
             "name": "Mike Scops / Corentin Mors ",
             "email": "mikescops@pixelswap.fr"
         }
-    ]
+    ],
+    "extra": {
+        "bolt-screenshots": [
+            "screenshots/home.png",
+            "screenshots/splash.png",
+            "screenshots/internal.png"
+        ]
+    }
 }
