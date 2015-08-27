@@ -1,6 +1,6 @@
 {
     "name": "mikescops/bootstrapbolttheme",
-    "description": "A bootstrap basical theme. ",
+    "description": "A bootstrap basical theme.",
     "type": "bolt-theme",
     "keywords": ["theme", "bootstrap", "base", "simple", "showcase"],
     "require": {
@@ -9,7 +9,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Mike Scops / Corentin Mors ",
+            "name": "Corentin Mors ",
             "email": "mikescops@pixelswap.fr"
         }
     ],
@@ -18,6 +18,7 @@
             "screenshots/home.png",
             "screenshots/splash.png",
             "screenshots/internal.png"
-        ]
+        ],
+        "bolt-icon": "icon-bootstrap.png"
     }
 }
