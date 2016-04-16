@@ -5,6 +5,8 @@ Bootstrap Bolt Theme
 
 This theme was created by Mike Scops at pixelswap.fr for Bolt CMS. Feel free to use it for your projects !*
 
+**Note:**  This is for Bolt 3. Check out the `bolt-v2` branch for a Bolt 2 compatible version.
+
 
 Theme Installation :
 
