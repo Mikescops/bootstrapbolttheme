@@ -2,6 +2,8 @@
 
 <aside class="four columns">
 
+    {{ widgets('aside_top') }}
+
     <div class="panel">
         {# The next section attempts to fill the panel in the sidebar with part of the
            'about'-page, if it exists. First, attempt to fetch a page with slug 'about' #}
@@ -54,6 +56,7 @@
 
     {% endfor %}
 
+    {{ widgets('aside_bottom') }}
 
 </aside>
 
