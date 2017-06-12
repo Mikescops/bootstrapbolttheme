@@ -1,14 +1,13 @@
-bootstrapbolttheme
+Bootstrap Bolt Theme
 ==================
 
-Bootstrap Bolt Theme
 
 This theme was created by Mike Scops at pixelswap.fr for Bolt CMS. Feel free to use it for your projects !*
 
 **Note:**  This is for Bolt 3. Check out the `bolt-v2` branch for a Bolt 2 compatible version.
 
 
-Theme Installation :
+### Theme Installation :
 
 1/ Upload all the files in your theme directory.
 
@@ -17,7 +16,7 @@ Theme Installation :
 3/ And voilà !
 
 
-Homepage configuration :
+### Homepage configuration :
 
 To show your own post type on the homepage you need to modify the index.twig template on line 16, change "articles" by what you want.
 
