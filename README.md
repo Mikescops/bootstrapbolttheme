@@ -1,6 +1,7 @@
-Bootstrap Bolt Theme
-==================
+# Bootstrap Bolt Theme
 
+[![Website](https://img.shields.io/website-up-down-green-red/https/pixelswap.fr.svg?label=PixelSwap.fr)](https://pixelswap.fr/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mikescops.svg?style=social&label=Follow&style=flat-square)](https://twitter.com/mikescops)
 
 This theme was created by Mike Scops at pixelswap.fr for Bolt CMS. Feel free to use it for your projects !*
 
