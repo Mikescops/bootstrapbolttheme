@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# make sure we always display a proper title: The record's title if there is one, appended with the
+       sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
+    <title>
+      {%- if record.title is defined %}{{ record.title|striptags }} | {% endif -%}
+          {{ config.get('general/sitename') -}}
+      {% if record.title is not defined and config.get('general/payoff') %} | {{ config.get('general/payoff') }}{% endif -%}
+    </title>
+
+    {# Stylesheet for Bootstrap #}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css', 'theme') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.css', 'theme') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css', 'theme') }}">
+</head>
+<body>
+
+	<div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="{{ url('homepage') }}">{{ config.get('general/sitename') -}}</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+              	{{ menu('main', '_sub_menu.twig') }}
+
+              	{% include '_sub_searchbox.twig' %}
+
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+    {% block main %}{% endblock main %}
+
+  <!-- FOOTER -->
+  <footer style="text-align: center; margin-top: 30px;">
+    <p class="pull-right" style="margin-right: 10px;"><a href="#">Back to top</a></p>
+    <p>Themed by <a href="https://pixelswap.fr/" target="_blank">Corentin Mors</a> &middot; &copy; Bolt CMS</p>
+  </footer>
+
+  <!-- End Footer -->
+
+
+  {# Javascript for Bootstrap #}
+  <script src="{{ asset('js/jquery.min.js', 'theme') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js', 'theme') }}"></script>
+  <script src="{{ asset('js/bootstrap.js', 'theme') }}"></script>
+  <script src="{{ asset('js/bootstrap-dropdown.js', 'theme') }}"></script>
+
+</body>
