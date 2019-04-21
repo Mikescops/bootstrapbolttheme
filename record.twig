@@ -64,10 +64,14 @@
                     {{ attribute(record, key)|join(", ") }}
                 </p>
 
-            {% elseif record.fieldtype(key) not in ['templateselect'] and value != "" %}
+            {% elseif record.fieldtype(key) not in ['templateselect'] and key != "templatefields" and value != "" %}
 
                 <p><strong>{{ key }}: </strong>
-                    {{ attribute(record, key) }}
+                    {% if attribute(record, key) is iterable %}
+                        {{ dump(attribute(record, key)) }}
+                    {% else %}
+                        {{ attribute(record, key) }}
+                    {% endif %}
                 </p>
 
             {%  endif %}
